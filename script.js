@@ -9,14 +9,14 @@
       confetti({
         particleCount: isMobile ? 5 : 10,       // more particles for mobile
         spread: isMobile ? 120 : 150,           // wider spread on small screen
-        scalar: isMobile ? 3 : 5,              // BIGGER pieces on mobile
+        scalar: isMobile ? 2 : 3,              // BIGGER pieces on mobile
         origin: { x: 0 }
       });
 
       confetti({
         particleCount: isMobile ? 5 : 10,       // more particles for mobile
         spread: isMobile ? 120 : 150,            // wider spread on small screen
-        scalar: isMobile ? 3 : 5,              // BIGGER pieces on mobile
+        scalar: isMobile ? 2 : 3,              // BIGGER pieces on mobile
         origin: { x: 1 }
       });
 
