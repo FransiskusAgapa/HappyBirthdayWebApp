@@ -17,7 +17,6 @@ body {
   max-width: 800px;
   width: 90%;
   padding: 50px 30px;  /* more breathing space */
-  margin: 20px;
   background: rgba(255, 192, 203, 0.85);
   border-radius: 22px;
   backdrop-filter: blur(12px);
@@ -29,7 +28,7 @@ body {
 /* Text settings */
 h1 {
   font-size: 4.8rem;     /* BIGGER for mobile */
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -39,7 +38,7 @@ h2 {
 }
 
 .typing {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid pink;
