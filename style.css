@@ -4,7 +4,7 @@ body {
   background: linear-gradient(135deg, #ffc0cb, #ffe4e1);
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
   backdrop-filter: blur(6px);
