@@ -4,6 +4,7 @@ body {
   background: linear-gradient(135deg, #ffc0cb, #ffe4e1);
   min-height: 100vh;
   display: flex;
+  overflow: hidden;
   align-items: start;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
@@ -22,19 +23,22 @@ body {
   backdrop-filter: blur(12px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   text-align: center;
-  animation: typing 3.5s steps(40, end) forwards, blink-caret 0.8s step-end infinite;
+  animation: fadeIn 1s ease forwards, typing 3.5s steps(40, end) forwards, blink-caret 0.8s step-end infinite;
 }
 
 /* Text settings */
 h1 {
-  font-size: 2.4rem;   /* BIGGER for mobile */
+  font-size: 3.2rem;   /* BIGGER for mobile */
   margin-bottom: 20px;
 }
 
-.typing {
-  font-size: 1.6rem;   /* BIGGER */
+h2 {
+  font-size: 2rem;   /* BIGGER */
   font-weight: 600;
   color: #333;
+}
+
+.typing {
   margin-bottom: 25px;
   white-space: nowrap;
   overflow: hidden;
@@ -44,7 +48,7 @@ h1 {
 }
 
 p {
-  font-size: 1.4rem;  /* Larger paragraph text */
+  font-size: 1.9rem;  /* Larger paragraph text */
   margin-bottom: 30px;
   color: #444;
   line-height: 1.9;
@@ -75,7 +79,7 @@ button:hover {
 /* Animations stay same */
 @keyframes breathing {
   0% { transform: scale(1); }
-  50% { transform: scale(1.03); }
+  50% { transform: scale(1.04); }
   100% { transform: scale(1); }
 }
 
@@ -99,15 +103,11 @@ button:hover {
   }
 
   h1 {
-    font-size: 2.2rem;  /* even BIGGER */
+    font-size: 2.0rem;  /* even BIGGER */
   }
 
-  .typing {
-    font-size: 1.8rem;
-  }
-
-  p {
-    font-size: 1.6rem;
+  h2{
+    font-size:  1.8rem;
   }
 
   button {
@@ -118,6 +118,10 @@ button:hover {
 
 /* Very large screens */
 @media (min-width: 1200px) {
+  .body{
+    padding: 200px 0 0 0 ;
+  }
+
   .card {
     max-width: 700px;
   }
