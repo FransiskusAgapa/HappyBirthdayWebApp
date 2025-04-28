@@ -95,7 +95,7 @@ button:hover {
 /* Phones and Small Tablets */
 @media (max-width: 600px) {
   body {
-    align-items: start;
+    align-items: start !important;
     padding: 200px 0 0 0 !important;
   }
 
