@@ -3,22 +3,21 @@
   function launchConfetti() {
     var duration = 2 * 1000; // 2 seconds
     var end = Date.now() + duration;
+    const isMobile = window.innerWidth <= 600;
 
     (function frame() {
       confetti({
-        particleCount: 5,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-        colors: ['#ff69b4', '#ffb6c1', '#8b008b', '#4b0082']
-      });
-      confetti({
-        particleCount: 5,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-        colors: ['#ff69b4', '#ffb6c1', '#8b008b', '#4b0082']
-      });
+      particleCount: isMobile ? 150 : 100,    // more particles for mobile
+      spread: isMobile ? 90 : 70,              // wider spread on small screen
+      scalar: isMobile ? 1.5 : 1,              // BIGGER pieces on mobile
+      origin: { y: 0.6 }
+    });
+    confetti({
+      particleCount: isMobile ? 150 : 100,    // more particles for mobile
+      spread: isMobile ? 90 : 70,              // wider spread on small screen
+      scalar: isMobile ? 1.5 : 1,              // BIGGER pieces on mobile
+      origin: { y: 0.6 }
+    });
 
       if (Date.now() < end) {
         requestAnimationFrame(frame);
