@@ -23,7 +23,6 @@ body {
   backdrop-filter: blur(12px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   text-align: center;
-  animation: fadeIn 1s ease forwards, typing 3.5s steps(40, end) forwards, blink-caret 0.8s step-end infinite;
 }
 
 /* Text settings */
@@ -44,7 +43,7 @@ h2 {
   overflow: hidden;
   border-right: 2px solid pink;
   width: 0;
-  animation: typing 3.5s steps(40, end) forwards, blink-caret 0.8s step-end infinite;
+  animation: typing 4s steps(40, end), breathing 3s infinite;
 }
 
 p {
@@ -70,11 +69,6 @@ button {
 button:hover {
   background-color: #ff1493;
 }
-
-/* Fade In animation */
-@keyframes fadeIn {
-  to { opacity: 1; }
-} 
 
 /* Animations stay same */
 @keyframes breathing {
