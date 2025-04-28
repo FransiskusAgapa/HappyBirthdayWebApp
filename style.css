@@ -1,33 +1,34 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #ffc0cb, #ffe4e1); /* Soft pink gradient */
+  background: linear-gradient(135deg, #ffc0cb, #ffe4e1);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(6px);
+  overflow-x: hidden;
 }
 
 /* Card container */
 .card {
-  max-width: 600px;
-  width: 90%; /* Shrinks on small devices */
-  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  padding: 40px 25px;
   margin: 20px;
-  background: rgba(255, 182, 193, 0.85); /* Light pink card */
+  background: rgba(255, 192, 203, 0.85);
   border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   text-align: center;
-  animation: fadeIn 1s ease forwards, breathing 3s ease-in-out infinite;
+  animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
 }
 
 /* Heading */
 h1 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* Typing text */
@@ -38,37 +39,41 @@ h1 {
   margin-bottom: 20px;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid pink;
+  border-right: 2px solid pink;
   width: 0;
-  animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+  animation: typing 3.5s steps(40, end) forwards, blink-caret 0.8s step-end infinite;
 }
 
 /* Paragraph */
 p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   margin-bottom: 30px;
+  color: #444;
+  line-height: 1.6;
 }
 
 /* Button */
 button {
-  background-color: #ff69b4; /* Hot pink */
+  background-color: #ff69b4;
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 14px 28px;
   font-size: 1rem;
+  font-weight: bold;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 10px;
 }
 
 button:hover {
-  background-color: #ff1493; /* Deeper pink on hover */
+  background-color: #ff1493;
 }
 
 /* Fade In animation */
 @keyframes fadeIn {
   to { opacity: 1; }
-}
+} 
 
 /* Breathing animation */
 @keyframes breathing {
@@ -87,13 +92,14 @@ button:hover {
   50% { border-color: transparent }
 }
 
-/* === Responsive rules === */
+/* === Responsive Rules === */
 
-/* Mobile phones */
+/* Phones and Small Tablets */
 @media (max-width: 600px) {
   .card {
-    padding: 20px;
+    padding: 30px 20px;
     margin: 15px;
+    border-radius: 18px;
   }
 
   h1 {
@@ -105,18 +111,19 @@ button:hover {
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+    padding: 12px 24px;
+    font-size: 0.95rem;
   }
 }
 
 /* Very large screens */
 @media (min-width: 1200px) {
   .card {
-    max-width: 700px;
+    max-width: 650px;
   }
 }
+
