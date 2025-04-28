@@ -4,20 +4,21 @@
     var duration = 2 * 1000; // 2 seconds
     var end = Date.now() + duration;
     const isMobile = window.innerWidth <= 600;
-
+    
     (function frame() {
       confetti({
-      particleCount: isMobile ? 150 : 100,    // more particles for mobile
-      spread: isMobile ? 90 : 70,              // wider spread on small screen
-      scalar: isMobile ? 1.5 : 1,              // BIGGER pieces on mobile
-      origin: { y: 0.6 }
-    });
-    confetti({
-      particleCount: isMobile ? 150 : 100,    // more particles for mobile
-      spread: isMobile ? 90 : 70,              // wider spread on small screen
-      scalar: isMobile ? 1.5 : 1,              // BIGGER pieces on mobile
-      origin: { y: 0.6 }
-    });
+        particleCount: isMobile ? 10 : 5,    // more particles for mobile
+        spread: isMobile ? 150 : 120,              // wider spread on small screen
+        scalar: isMobile ? 2 : 1,              // BIGGER pieces on mobile
+        origin: { x: 0 }
+      });
+
+      confetti({
+        particleCount: isMobile ? 10 : 5,    // more particles for mobile
+        spread: isMobile ? 150 : 120,              // wider spread on small screen
+        scalar: isMobile ? 2 : 1,              // BIGGER pieces on mobile
+        origin: { x: 1 }
+      });
 
       if (Date.now() < end) {
         requestAnimationFrame(frame);

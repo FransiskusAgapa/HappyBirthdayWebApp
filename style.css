@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 40px 0 0 0;
   background: linear-gradient(135deg, #ffc0cb, #ffe4e1);
   min-height: 100vh;
   display: flex;
@@ -60,7 +60,7 @@ button {
   color: white;
   border: none;
   padding: 16px 32px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   border-radius: 30px;
   cursor: pointer;
@@ -104,14 +104,6 @@ button:hover {
     border-radius: 20px;
   }
 
-  h1 {
-    font-size: 10rem;  /* even BIGGER */
-  }
-
-  h2{
-    font-size:  1.8rem;
-  }
-
   button {
     padding: 16px 30px !important;
     font-size: 4rem !important;
@@ -122,7 +114,7 @@ button:hover {
 @media (min-width: 1200px) {
   body {
     align-items: start;
-    padding: 60px 0 0 0 !important;
+    padding: 0;
   }
 
   .card {
