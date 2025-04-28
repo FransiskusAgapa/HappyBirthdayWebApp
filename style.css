@@ -1,94 +1,122 @@
-/* Base styling */
 body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      font-family: 'Montserrat', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #ffe6f0, #ffd6eb);
-      backdrop-filter: blur(10px);
-      overflow: hidden;
-    }
-
-    /* Container (Card) */
-    .card {
-      background-color: #ffb6c1;
-      border-radius: 20px;
-      padding: 40px;
-      text-align: center;
-      width: 90%;
-      max-width: 500px;
-      box-shadow: 0 8px 32px rgba(255, 105, 180, 0.4);
-      animation: breathe 3s ease-in-out infinite;
-    }
-
-    /* Breathing animation */
-    @keyframes breathe {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.02); }
-      100% { transform: scale(1); }
-    }
-
-    h1 {
-      font-size: 36px;
-      color: #8b008b;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 20px;
-      color: #4b0082;
-      margin-top: 20px;
-    }
-
-    /* Typing effect */
-    .typing {
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 3px solid #8b008b;
-      animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
-      font-size: 20px;
-      color: #4b0082;
-      margin: 20px 0;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-
-    /* Button */
-    button {
-      margin-top: 30px;
-      padding: 12px 24px;
-      background-color: #ff69b4;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #ff1493;
-    }
-
-    /* Button bounce effect */
-.bounce {
-  animation: bounce 0.5s;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffc0cb, #ffe4e1); /* Soft pink gradient */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  backdrop-filter: blur(5px);
 }
 
-@keyframes bounce {
+/* Card container */
+.card {
+  max-width: 600px;
+  width: 90%; /* Shrinks on small devices */
+  padding: 30px;
+  margin: 20px;
+  background: rgba(255, 182, 193, 0.85); /* Light pink card */
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 1s ease forwards, breathing 3s ease-in-out infinite;
+}
+
+/* Heading */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Typing text */
+.typing {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid pink;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Paragraph */
+p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Button */
+button {
+  background-color: #ff69b4; /* Hot pink */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff1493; /* Deeper pink on hover */
+}
+
+/* Fade In animation */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Breathing animation */
+@keyframes breathing {
   0% { transform: scale(1); }
-  25% { transform: scale(1.15); }
-  50% { transform: scale(0.95); }
-  75% { transform: scale(1.05); }
+  50% { transform: scale(1.02); }
   100% { transform: scale(1); }
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent }
+}
+
+/* === Responsive rules === */
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .typing {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Very large screens */
+@media (min-width: 1200px) {
+  .card {
+    max-width: 700px;
+  }
 }
