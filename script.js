@@ -14,9 +14,9 @@
       });
 
       confetti({
-        particleCount: isMobile ? 15 : 5,    // more particles for mobile
-        spread: isMobile ? 160 : 120,              // wider spread on small screen
-        scalar: isMobile ? 2 : 1,              // BIGGER pieces on mobile
+        particleCount: isMobile ? 15 : 5,      // more particles for mobile
+        spread: isMobile ? 160 : 120,          // wider spread on small screen
+        scalar: isMobile ? 3 : 1,              // BIGGER pieces on mobile
         origin: { x: 1 }
       });
 
