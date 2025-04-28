@@ -60,11 +60,12 @@ button {
   color: white;
   border: none;
   padding: 16px 32px;
-  font-size: 1.4rem;
+  font-size: 1.9rem;
   font-weight: bold;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 1rem; /* Add a little breathing space */
 }
 
 button:hover {
