@@ -43,7 +43,7 @@ h2 {
   overflow: hidden;
   border-right: 2px solid pink;
   width: 0;
-  animation: typing 4s steps(40, end), breathing 3s infinite;
+  animation: typing 3.5s steps(40, end) forwards, blink-caret 0.8s step-end infinite;
 }
 
 p {
