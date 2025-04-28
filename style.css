@@ -1,11 +1,10 @@
 body {
   margin: 0;
-  padding: 600px 0 0 0 ;
+  padding: 0 ;
   background: linear-gradient(135deg, #ffc0cb, #ffe4e1);
   min-height: 100vh;
   display: flex;
-  overflow: hidden;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
   backdrop-filter: blur(6px);
@@ -28,12 +27,12 @@ body {
 
 /* Text settings */
 h1 {
-  font-size: 3.2rem;   /* BIGGER for mobile */
+  font-size: 2.8rem;   /* BIGGER for mobile */
   margin-bottom: 20px;
 }
 
 h2 {
-  font-size: 2rem;   /* BIGGER */
+  font-size: 1.8rem;   /* BIGGER */
   font-weight: 600;
   color: #333;
 }
@@ -93,6 +92,10 @@ button:hover {
 
 /* Phones and Small Tablets */
 @media (max-width: 600px) {
+  .body {
+    padding: 600px 0 0 0 ;
+  }
+
   .card {
     padding: 50px 25px;
     margin: 20px;
