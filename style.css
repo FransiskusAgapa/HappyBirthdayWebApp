@@ -28,7 +28,7 @@ body {
 
 /* Text settings */
 h1 {
-  font-size: 7rem;   /* BIGGER for mobile */
+  font-size: 4rem;   /* BIGGER for mobile */
   margin-bottom: 20px;
 }
 
@@ -48,7 +48,7 @@ h2 {
 }
 
 p {
-  font-size: 4rem;  /* Larger paragraph text */
+  font-size: 2.6rem;  /* Larger paragraph text */
   margin-bottom: 30px;
   color: #444;
   line-height: 1.9;
