@@ -119,7 +119,6 @@ button:hover {
 /* Medium size device */
 @media (min-width: 650px) {
   h1{
-    color:red;
     font-size: 3.1rem;
   }
 
