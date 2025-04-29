@@ -36,5 +36,8 @@ The page features:
 Built with love and attention to design details, focusing on delivering a meaningful and accessible birthday experience.
 
 ## See How It Works
-https://github.com/user-attachments/assets/6475257c-89c3-4b14-8b92-be4fc1a9c4f0
+https://github.com/user-attachments/assets/d406dddb-c839-4af0-b4ee-5ada7a775ad2
+
+
+
 
