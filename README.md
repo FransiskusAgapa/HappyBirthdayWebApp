@@ -34,3 +34,5 @@ The page features:
 
 ## Credits
 Built with love and attention to design details, focusing on delivering a meaningful and accessible birthday experience.
+
+## See How It Works
